@@ -69,6 +69,14 @@ open class SequenceUpdateBatchNonNullGenerator : TopLevelFunctionGenerator {
                                                 primaryKey.entityPropertyName.simpleName
                                             )
                                         }
+                                    } else {
+                                        addStatement(
+                                            "set(%T.%L,·entity.%L.%L)",
+                                            table.tableClassName,
+                                            column.tablePropertyName.simpleName,
+                                            inputProperty,
+                                            primaryKey.entityPropertyName.simpleName
+                                        )
                                     }
                                 } else {
                                     if (nullableInput.contains(inputProperty) && !column.isPrimaryKey) {
@@ -80,6 +88,13 @@ open class SequenceUpdateBatchNonNullGenerator : TopLevelFunctionGenerator {
                                                 column.entityPropertyName.simpleName
                                             )
                                         }
+                                    } else {
+                                        addStatement(
+                                            "set(%T.%L,·entity.%L)",
+                                            table.tableClassName,
+                                            column.tablePropertyName.simpleName,
+                                            column.entityPropertyName.simpleName
+                                        )
                                     }
                                 }
                             }
