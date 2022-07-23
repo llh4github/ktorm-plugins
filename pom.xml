@@ -21,6 +21,9 @@
         <ktorm-ksp.version>1.0.0-RC3</ktorm-ksp.version>
     </properties>
 
+    <scm>
+        <connection>https://github.com/llh4github/ktorm-plugins.git</connection>
+    </scm>
 
     <dependencies>
         <dependency>
@@ -56,9 +59,14 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>versions-maven-plugin</artifactId>
-                <version>2.11.0</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
+                    <arguments>-DskipTests</arguments>
+                </configuration>
             </plugin>
         </plugins>
     </build>
