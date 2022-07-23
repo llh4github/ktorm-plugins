@@ -22,7 +22,7 @@
     </properties>
 
     <scm>
-        <connection>https://github.com/llh4github/ktorm-plugins.git</connection>
+        <connection>scm:git:https://github.com/llh4github/ktorm-plugins</connection>
     </scm>
 
     <dependencies>
