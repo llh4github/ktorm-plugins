@@ -9,7 +9,7 @@
         <module>update-nonnull</module>
     </modules>
     <groupId>com.github.llh4github</groupId>
-    <version>0.1</version>
+    <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>ktorm-plugins</name>
