@@ -1,4 +1,4 @@
-package com.jihulab.llh4gitlab
+package com.github.llh4github
 
 import com.google.devtools.ksp.symbol.Nullability
 import com.squareup.kotlinpoet.FunSpec
